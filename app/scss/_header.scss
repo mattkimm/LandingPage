@@ -1,5 +1,30 @@
 .header {
- 
+    // Hamburger open styles
+    &.open {
+        .header__menu {
+            > span:first-child {
+                transform : rotate(45deg);
+            }
+            > span:nth-child(2) {
+                opacity : 0;
+            }
+            > span:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+     
+    }
+    .overlay {
+        position : fixed;
+        //60/16
+        top : 3.75rem;
+        right : 0px;
+        bottom : 0px;
+        left : 0px;
+        background-image : linear-gradient( $darkBlue, transparent);
+    }
+    
+    
     nav {
         //17px 24px;
         padding : 1.0625rem 1.5rem;
@@ -25,17 +50,7 @@
                 margin-bottom: 5px;
             }
         }
-        &.open {
-            > span:first-child {
-                transform : rotate(45deg);
-            }
-            > span:nth-child(2) {
-                opacity : 0;
-            }
-            > span:last-child {
-                transform: rotate(-45deg);
-            }
-        }
+
     }
 
     &__links {
@@ -76,3 +91,5 @@
         }
     }
 }
+
+
